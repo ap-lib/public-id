@@ -1,0 +1,30 @@
+{
+  "name": "ap-lib/public-id",
+  "description": "",
+  "type": "library",
+  "homepage": "https://github.com/ap-lib/public-id",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Anton Panfilov"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AP\\PublicID\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AP\\PublicID\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "10.5.*"
+  }
+}
