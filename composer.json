@@ -1,6 +1,6 @@
 {
   "name": "ap-lib/public-id",
-  "description": "",
+  "description": "A small PHP library for generating short, public-friendly integer IDs from internal numeric IDs. Designed to hide system scale and client-specific patterns while keeping IDs compact and reversible.",
   "type": "library",
   "homepage": "https://github.com/ap-lib/public-id",
   "license": "MIT",
