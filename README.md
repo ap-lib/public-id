@@ -6,8 +6,12 @@ A small PHP library for generating short, public-friendly integer IDs from inter
 
 Designed to hide system scale and client-specific patterns while keeping IDs compact and reversible.
 
-> ❗️Not for security purposes. If clients know you're using `UnsafePublicID`, they might infer ID ranges or volumes.  
-> Use `SafePublicID` for stronger obfuscation with a mask.
+> ❗️Not for security purposes. 
+> 
+> If clients know you're using `UnsafePublicID`, they might infer ID ranges or volumes.
+> Use `SafePublicID` for stronger obfuscation with a mask. 
+> 
+> It's still reversible and not secure, but the effort required to reverse-engineer it is significantly greater.
 
 ---
 
