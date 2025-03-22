@@ -48,7 +48,15 @@ $decoded_original_id = UnsafePublicID::decode(
     digits_divider: $digits_divider
 );
 
-assert($decoded_original_id === $original_id);
+// $decoded_original_id equal $original_id
+
+$public_id_2 = UnsafePublicID::encode(
+    int: $original_id,
+    digits_divider: $digits_divider
+);
+
+// $public_id equal $public_id_2
+
 ```
 
 ---
@@ -58,7 +66,12 @@ assert($decoded_original_id === $original_id);
 ```php
 use AP\PublicID\SafePublicID;
 
-$safePublicId = new SafePublicID(mask: 902734092);
+$secret_mask_from_envs = 902734092;
+
+$safePublicId = new SafePublicID(
+    mask: $secret_mask_from_envs
+);
+
 $digits_divider = 2;
 $original_id = 1000;
 
@@ -72,7 +85,16 @@ $decoded_original_id = $safePublicId->decode(
     digits_divider: $digits_divider
 );
 
-assert($decoded_original_id === $original_id);
+// $decoded_original_id equal $original_id
+
+$public_id_2 = $safePublicId->encode(
+    int: $original_id,
+    digits_divider: $digits_divider
+);
+
+
+// $public_id equal $public_id_2
+
 ```
 
 ---

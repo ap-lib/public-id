@@ -24,6 +24,13 @@ final class UnsafePublicIDTest extends TestCase
         );
 
         $this->assertEquals($decoded_original_id, $original_id);
+
+        $public_id_2 = UnsafePublicID::encode(
+            original: $original_id,
+            digits_divider: $digits_divider
+        );
+
+        $this->assertEquals($public_id, $public_id_2);
     }
 
     public function testBrutforse(): void

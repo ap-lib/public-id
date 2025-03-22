@@ -5,7 +5,7 @@ namespace AP\PublicID\Tests;
 use AP\PublicID\SafePublicID;
 use PHPUnit\Framework\TestCase;
 
-final class UnsafePublicIDTest extends TestCase
+final class SafePublicIDTest extends TestCase
 {
     public function testUse()
     {
@@ -26,6 +26,13 @@ final class UnsafePublicIDTest extends TestCase
         );
 
         $this->assertEquals($decoded_original_id, $original_id);
+
+        $public_id_2 = $safePublicId->encode(
+            original: $original_id,
+            digits_divider: $digits_divider
+        );
+
+        $this->assertEquals($public_id, $public_id_2);
     }
 
     public function testBrutforse(): void
